@@ -197,8 +197,8 @@ Edit `~/connect-hotspot.sh` to customize:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `HOTSPOT_NAME` | "AP-21" | iPhone WiFi hotspot connection name |
-| `HOME_WIFI` | ("dlink-516C-5GHz" "Network Error") | Array of home WiFi network names |
+| `HOTSPOT_NAME` | "Sample_Name" | iPhone wifi hotspot connection name |
+| `HOME_WIFI` | ("Sample_Name" "Sample_Name") | home wifi network names |
 | `CHECK_INTERVAL` | 10 | Seconds between checks when disconnected |
 | `CONNECTED_INTERVAL` | 30 | Seconds between checks when connected |
 | `NOT_FOUND_INTERVAL` | 120 | Seconds to wait when hotspot not found |
@@ -263,10 +263,10 @@ journalctl --user -u wifi-manager.service --since "10 minutes ago"
 ### Connection Not Working
 ```bash
 # Verify connection profile exists
-nmcli connection show | grep "AP-21"
+nmcli connection show | grep "Sample_Name"
 
 # Test manual connection
-nmcli connection up "AP-21"
+nmcli connection up "Sample_Name"
 
 # Check WiFi interface name
 nmcli device status | grep wifi
