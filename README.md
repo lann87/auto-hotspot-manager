@@ -1,0 +1,1 @@
+# auto-hotspot-connection-manager
